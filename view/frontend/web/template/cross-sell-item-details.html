@@ -1,0 +1,13 @@
+<li class="cross-sell-products">
+    <!-- ko foreach: getRegion('thumbnail') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- /ko -->
+    <a class="cross-sell-product-name" data-bind="attr: {'href': $parent.item_url}">
+        <span  data-bind="html: escape($parent.name)"></span>
+    </a>
+    <p class="cross-sell-product-price">
+        <!-- ko foreach: getRegion('subtotal') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+    </p>
+</li>

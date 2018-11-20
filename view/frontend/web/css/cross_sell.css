@@ -1,0 +1,36 @@
+.onestepcheckout-index-index .page-main .checkout-container .aw-onestep-sidebar.aw-mobile-hide {
+    padding: 0;
+    font-family: 'BrownBold';
+    font-size: 14px;
+    background: none;
+    border: none;
+}
+
+.cross-sell-products {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.cross-sell-products:last-child {
+    margin-bottom: 0;
+}
+
+.product-image-container {
+    float: left;
+    margin: 0 15px 0 0;
+    background: #F8F8F8;
+}
+.product-image-container > span {
+    display: block;
+}
+
+.product-image-container img {
+    height: 100%;
+}
+.cross-sell-product-name {
+    color: #333333;
+}
+
+.cross-sell-product-price {
+    margin: 10px 0 0 0;
+}

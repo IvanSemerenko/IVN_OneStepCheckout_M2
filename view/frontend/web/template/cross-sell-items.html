@@ -1,0 +1,9 @@
+<!-- ko if: isShow() -->
+<ul class="checkout_cross_sell" data-bind="blockLoader: isLoading">
+    <!-- ko foreach: crossSellItems() -->
+        <!-- ko foreach: $parent.elems() -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        <!-- /ko -->
+    <!-- /ko -->
+</ul>
+<!-- /ko -->

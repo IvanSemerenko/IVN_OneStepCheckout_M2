@@ -1,0 +1,78 @@
+<!-- Shipping and payment methods -->
+<div class="aw-onestep aw-onestep-main">
+    <div class="aw-mobile-hide">
+        <!-- ko foreach: getRegion('column-top') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+    </div>
+    <!-- ko foreach: getRegion('messages') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <!--/ko-->
+    <!-- ko foreach: getRegion('authentication') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <!--/ko-->
+    <!-- ko foreach: getRegion('email') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <!--/ko-->
+    <ul class="aw-onestep-groups">
+        <li class="aw-onestep-groups_item">
+            <div class="group-title">
+                <h2><span class="mark"></span><span data-bind="i18n: 'Your items'"></span></h2>
+            </div>
+            <div class="group-content">
+                <!-- ko foreach: getRegion('cart-items') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+                <!--/ko-->
+
+                <div class="aw-onestep-sidebar-block aw-sidebar-summary">
+                    <div class="aw-onestep-sidebar-block_title"></div>
+                    <div class="aw-onestep-sidebar-block_content">
+                        <!-- ko foreach: getRegion('totals') -->
+                        <!-- ko template: getTemplate() --><!-- /ko -->
+                        <!--/ko-->
+                    </div>
+                    <!-- ko foreach: getRegion('payment-options') -->
+                    <!-- ko template: getTemplate() --><!-- /ko -->
+                    <!--/ko-->
+                </div>
+                <!-- ko foreach: getRegion('order-note') -->
+                <!-- ko template: getTemplate() --><!-- /ko -->
+                <!--/ko-->
+            </div>
+            <!-- ko foreach: getRegion('trustSeals') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </li>
+        <!-- ko foreach: getRegion('shippingAddress') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+        <!-- ko foreach: getRegion('shippingMethod') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+        <!-- ko foreach: getRegion('paymentMethod') -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <!--/ko-->
+        <li class="toolbar_newsletter">
+            <div class="aw-onestep-sidebar-block aw-sidebar-before-place-order">
+                <div class="aw-onestep-sidebar-block_title"></div>
+                <div class="aw-onestep-sidebar-block_content">
+                    <!-- ko foreach: getRegion('before-place-order') -->
+                    <!-- ko template: getTemplate() --><!-- /ko -->
+                    <!--/ko-->
+                </div>
+            </div>
+        </li>
+        <li class="toolbar_order">
+            <!-- ko foreach: getRegion('actions-toolbar') -->
+            <!-- ko template: getTemplate() --><!-- /ko -->
+            <!--/ko-->
+        </li>
+    </ul>
+</div>
+
+<!-- Sidebar -->
+<div class="aw-onestep aw-onestep-sidebar aw-mobile-hide">
+    <!-- ko foreach: getRegion('cross-sell-items') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <!--/ko-->
+</div>

@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="checkout"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="IVN_OneStepCheckout::css/cross_sell.css"/>
+        <script src="IVN_OneStepCheckout::js/onestep.js"/>
+    </head>
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="config" xsi:type="array">
+                                <item name="template" xsi:type="string">IVN_OneStepCheckout/onestep</item>
+                            </item>
+                            <item name="children" xsi:type="array">
+                                <item name="cart-items" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="details" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="actions" xsi:type="array">
+                                                    <item name="component" xsi:type="string">IVN_OneStepCheckout/js/view/sidebar/item-details/actions</item>
+                                                    <item name="displayArea" xsi:type="string">actions</item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="crossSellItems" xsi:type="array">
+                                    <item name="component" xsi:type="string">
+                                        IVN_OneStepCheckout/js/view/cross-sell-items
+                                    </item>
+                                    <item name="displayArea" xsi:type="string">cross-sell-items</item>
+                                    <item name="children" xsi:type="array">
+                                        <item name="details" xsi:type="array">
+                                            <item name="component" xsi:type="string">
+                                                IVN_OneStepCheckout/js/view/cross-sell-items-details
+                                            </item>
+                                            <item name="children" xsi:type="array">
+                                                <item name="thumbnail" xsi:type="array">
+                                                    <item name="component" xsi:type="string">
+                                                        IVN_OneStepCheckout/js/view/cross-sell-items/thumbnail
+                                                    </item>
+                                                    <item name="displayArea" xsi:type="string">thumbnail</item>
+                                                </item>
+                                                <item name="subtotal" xsi:type="array">
+                                                    <item name="component" xsi:type="string">
+                                                        Magento_Checkout/js/view/summary/item/details/subtotal
+                                                    </item>
+                                                    <item name="displayArea" xsi:type="string">subtotal</item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="totals" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="subtotal" xsi:type="array">
+                                            <item name="config" xsi:type="array">
+                                                <item name="title" xsi:type="string" translate="true">Products total</item>
+                                            </item>
+                                        </item>
+                                        <item name="shipping" xsi:type="array">
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">IVN_OneStepCheckout/sidebar/totals/shipping</item>
+                                                <item name="title" xsi:type="string" translate="true">Shipping</item>
+                                                <item name="notCalculatedMessage" xsi:type="string" translate="true">Not yet calculated</item>
+                                                <item name="isShow" xsi:type="boolean">false</item>
+                                            </item>
+                                        </item>
+                                        <item name="grand-total" xsi:type="array">
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">IVN_OneStepCheckout/sidebar/totals/grand-total</item>
+                                                <item name="title" xsi:type="string" translate="true">Order Total</item>
+                                                <item name="isShow" xsi:type="boolean">false</item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="shippingMethod" xsi:type="array">
+                                    <item name="config" xsi:type="array">
+                                        <item name="template" xsi:type="string">IVN_OneStepCheckout/shipping-method</item>
+                                    </item>
+                                    <item name="children" xsi:type="array">
+                                        <item name="shipping-totals" xsi:type="array">
+                                            <item name="component" xsi:type="string">Aheadworks_OneStepCheckout/js/view/sidebar/totals</item>
+                                            <item name="sortOrder" xsi:type="string">9</item>
+                                            <item name="displayArea" xsi:type="string">shipping-totals</item>
+                                            <item name="children" xsi:type="array">
+                                                <item name="subtotal" xsi:type="array">
+                                                    <item name="component"  xsi:type="string">Magento_Checkout/js/view/summary/subtotal</item>
+                                                    <item name="config" xsi:type="array">
+                                                        <item name="title" xsi:type="string" translate="true">Products total</item>
+                                                    </item>
+                                                </item>
+                                                <item name="shipping" xsi:type="array">
+                                                    <item name="component"  xsi:type="string">Magento_Checkout/js/view/summary/shipping</item>
+                                                    <item name="config" xsi:type="array">
+                                                        <item name="title" xsi:type="string" translate="true">Shipping cost</item>
+                                                        <item name="notCalculatedMessage" xsi:type="string" translate="true">Not yet calculated</item>
+                                                    </item>
+                                                </item>
+                                                <item name="grand-total" xsi:type="array">
+                                                    <item name="component"  xsi:type="string">Magento_Checkout/js/view/summary/grand-total</item>
+                                                    <item name="config" xsi:type="array">
+                                                        <item name="title" xsi:type="string" translate="true">Total</item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="paymentMethod" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="methodList" xsi:type="array">
+                                            <item name="component" xsi:type="string">IVN_OneStepCheckout/js/view/payment-method/list</item>
+                                        </item>
+                                    </item>
+                                </item>
+                                <item name="before-place-order" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="newsletter-subscriber" xsi:type="array">
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">IVN_OneStepCheckout/newsletter-subscriber</item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+        <referenceContainer name="footer" remove="true" />
+    </body>
+</page>

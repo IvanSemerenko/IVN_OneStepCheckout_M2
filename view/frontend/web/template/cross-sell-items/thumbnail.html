@@ -1,0 +1,7 @@
+<a class="product-image-container" data-bind="attr: {'href': getUrl($parents[1])}">
+    <span data-bind="attr: {'style': 'height: ' + getHeight($parents[1]) + 'px; width: ' + getWidth($parents[1]) + 'px;' }">
+        <span class="product-image-wrapper">
+            <img data-bind="attr: {'src': getSrc($parents[1]), 'width': getWidth($parents[1]), 'height': getHeight($parents[1]), 'alt': getAlt($parents[1]) }"/>
+        </span>
+    </span>
+</a>

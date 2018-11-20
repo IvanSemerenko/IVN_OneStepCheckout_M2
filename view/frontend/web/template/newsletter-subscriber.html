@@ -1,0 +1,16 @@
+<div class="newsletter_container">
+    <div class="newsletter-title">
+        <span data-bind="i18n: 'newsletter'"></span>
+    </div>
+    <div class="newsletter-subscriber" data-role="newsletter-subscriber">
+        <input type="checkbox"
+               data-bind="attr: {
+                'id': 'is_subscribe_for_newsletter',
+                'name': 'is_subscribe_for_newsletter',
+                'value': 1,
+           }, checked: isSubscribe"/>
+        <label data-bind="attr: {'for': 'is_subscribe_for_newsletter'}">
+            <p data-bind="i18n: 'I don\'t want to miss out on the latest deals, news about new collections and limited edition releases.'"></p>
+        </label>
+    </div>
+</div
